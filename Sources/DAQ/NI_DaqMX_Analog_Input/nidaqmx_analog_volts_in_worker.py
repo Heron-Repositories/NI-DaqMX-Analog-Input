@@ -217,8 +217,8 @@ def initialise(_worker_object):
             task.ai_channels.add_ai_voltage_chan(n)
         task.timing.cfg_samp_clk_timing(rate=rate, sample_mode=sample_mode,
                                         samps_per_chan=buffer_size)
-        task.start()
 
+        task.start()
         # Start acquisition
         acquiring_on = True
 
@@ -270,7 +270,7 @@ def on_end_of_life():
     global vis
 
     acquiring_on = False
-    finish = False
+    finish = True
     try:
         vis.kill()
 
