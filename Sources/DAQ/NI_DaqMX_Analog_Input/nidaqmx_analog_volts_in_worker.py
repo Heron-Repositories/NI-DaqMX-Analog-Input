@@ -245,8 +245,8 @@ def acquire(_worker_object):
     while not acquiring_on and not finish:
         gu.accurate_delay(1)
 
-    worker_object.relic_create_parameters_df(visualisation_on=vis.visualisation_on, channels=channels,
-                                             rate=rate, sample_mode=sample_mode, buffer_size=buffer_size)
+    worker_object.savenodestate_create_parameters_df(visualisation_on=vis.visualisation_on, channels=channels,
+                                                     rate=rate, sample_mode=sample_mode, buffer_size=buffer_size)
 
     while acquiring_on and not finish:
 
